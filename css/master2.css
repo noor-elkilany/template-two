@@ -572,8 +572,10 @@ background-color:rgb( 0 0 0 / 40%) ;
 .stats .container {
   position: relative;
   display: flex;
-justify-content: center;
+  justify-content: center;
   gap: 5px;
+  flex-wrap: wrap;
+
 
 }
 .stats .container .box {
