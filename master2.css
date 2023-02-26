@@ -125,7 +125,7 @@ width:calc(100% - 30px);
 left: 15px;
 }
 header .logo img {
-height: 120px
+width: 230px;
 }
 header nav {
 flex: 1;
@@ -440,13 +440,14 @@ padding: 15px 0;
   }
 }
 .protofolio .imgs-container .box img {
-  max-width:100%;
+  max-width: 100%;
   width: 100%;
   transition: 0.3s;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
+  /* flex-wrap: wrap; */
 }
 .protofolio .imgs-container .box:hover .img {
   transform:rotate(3deg) scale(1.1);
@@ -553,15 +554,15 @@ background-color:rgb( 0 0 0 / 40%) ;
 /*end about*/ 
 /*satrt stats*/
 .stats {
-  padding-top:var(--section-padding);
-  padding-bottom:var(--section-padding);
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
   text-align: center;
-  background-image:url(sras.jpg) ;
-  background-size:cover;
+  background-image: url(sras.jpg) ;
+  background-size: cover;
   position: relative;
 }
 .stats::before {
-  content:" ";
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -572,9 +573,10 @@ background-color:rgb( 0 0 0 / 40%) ;
 .stats .container {
   position: relative;
   display: flex;
-justify-content: center;
+  justify-content: center;
   gap: 5px;
-
+  flex-wrap: wrap;
+  /* display: inline-block; */
 }
 .stats .container .box {
   color: white;
@@ -590,11 +592,11 @@ justify-content: center;
 @media (min-width: 768px) {
 .stats .container .box {
 flex-basis: 50%;
- } 
+  } 
  }
  @media (min-width: 992px) {
   .stats .container .box {
-  flex-basis: 25%;
+  flex-basis: 24%;
    } 
    }
 .stats .container .box i {
@@ -990,10 +992,10 @@ q::after {
   padding: 20px;
   display: flex;
   text-transform: uppercase;
-  cursor: pointer;s
+  cursor: pointer;
 }
 .contact .contact .info {
-  flex-basis: 25%;
+  flex-basis: 25%; 
 }
 @media (max-width:767px) {
   .contact .contact .info {
@@ -1052,7 +1054,7 @@ q::after {
   position: relative;
 }
 .footer img {
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
 .footer p:not(.copyright) {
   padding: 20px;
@@ -1068,7 +1070,8 @@ q::after {
 }
 
 .footer .copyright {
-  margin-top: 60px;
+  margin-top: 20px;
+  padding-bottom: 10px;
 }
 .footer .copyright span {
   font-weight: bold;
